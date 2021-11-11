@@ -8,3 +8,10 @@
 >>
 >> 사용 모델: DT, RF, Bagging, Adaboost, Gradientboost, xgboost
 >>
+
+> deeplearning.py
+>
+>> 딥러닝 모델 사용(dropout 활용)
+>>
+>> 현재 모두 0으로 예측
+>>
