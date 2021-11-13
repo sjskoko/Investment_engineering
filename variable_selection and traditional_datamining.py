@@ -92,7 +92,7 @@ y = y.drop(['id'], axis=1)
 
 # Dividing the data into train and test
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test = train_test_split(X,y,test_size = 0.20 ,random_state = 2, stratify =y)
+x_train,x_test,y_train,y_test = train_test_split(X,y,test_size = 0.20 , stratify =y)
 
 x_train.shape,y_train.shape,x_test.shape,y_test.shape
 
@@ -157,6 +157,17 @@ plt.show()
 
 # XGboost
 ## https://libertegrace.tistory.com/entry/Classification-4-%EC%95%99%EC%83%81%EB%B8%94-%ED%95%99%EC%8A%B5Ensemble-Learning-Boosting3-XGBoost
+
+
+# Dividing the data into train and test
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test = train_test_split(X,y,test_size = 0.20 , stratify =y)
+
+x_train.shape,y_train.shape,x_test.shape,y_test.shape
+
+
+
+
 # 사이킷런 래퍼 XGBoost 클래스인 XGBClassifier 임포트
 from xgboost import XGBClassifier
 
