@@ -85,4 +85,12 @@ y_pred_proba = xgb_wrapper.predict_proba(x_test)[:, 1]
 get_clf_eval(y_test, y_preds, y_pred_proba)
 
 
-sum(acc)/len(acc)
+a=list(y_preds)
+b=list(y_test['loan_status'])
+o=0
+x=0
+for i in range(len(list(y_preds))):
+    if a[i] == b[i]:
+        o += 1
+    else:
+        x += 1
