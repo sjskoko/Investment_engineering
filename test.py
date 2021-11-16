@@ -7,12 +7,21 @@ from sklearn.metrics import f1_score, roc_auc_score
 
 # 변수 재로드
 X = pd.read_csv('./content/loan_train_preprocessed.csv')
-# X = X[['term', 'initial_list_status', 'int_rate', 
-# 'emp_length', 'annual_inc', 'dti', 'delinq_2yrs', 
-# 'inq_last_6mths', 'revol_util', 'recoveries', 
-# 'collection_recovery_fee', 'tot_cur_bal', 
-# 'home_ownershipRENT', 'purposesmall_business', 
-# 'purposewedding', 'earliest_cr_line2000']]
+
+# forward
+X = X[['int_rate', 'recoveries', 'annual_inc', 'emp_length', 
+'dti', 'initial_list_status', 'collection_recovery_fee', 
+'home_ownershipRENT', 'term', 'inq_last_6mths', 'tot_cur_bal', 
+'delinq_2yrs', 'revol_util', 'earliest_cr_line2000', 'purposewedding', 
+'purposesmall_business']]
+
+# backward
+X = X[['term', 'initial_list_status', 'int_rate', 
+'emp_length', 'annual_inc', 'dti', 'delinq_2yrs', 
+'inq_last_6mths', 'revol_util', 'recoveries', 
+'collection_recovery_fee', 'tot_cur_bal', 
+'home_ownershipRENT', 'purposesmall_business', 
+'purposewedding', 'earliest_cr_line2000']]
 
 X = X.drop(['id', 'loan_status', 'out_prncp', 'out_prncp_inv', \
 'funded_amnt', 'loan_amnt', 'funded_amnt_inv', 'total_rev_hi_lim'], axis=1)

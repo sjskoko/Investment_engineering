@@ -86,6 +86,20 @@ X = X.drop(['home_ownershipRENT', 'home_ownershipMORTGAGE', 'home_ownershipOTHER
        'earliest_cr_line2000', 'earliest_cr_line1970', 'earliest_cr_line1980',
        'earliest_cr_line1960', 'earliest_cr_line1950'], axis=1)
 
+X.columns
+['term', 'initial_list_status', 'int_rate', 
+'emp_length', 'annual_inc', 'dti', 'delinq_2yrs', 
+'inq_last_6mths', 'revol_util', 'recoveries', 
+'collection_recovery_fee', 'tot_cur_bal', 
+'home_ownershipRENT', 'purposesmall_business', 
+'purposewedding', 'earliest_cr_line2000']
+
+['int_rate', 'recoveries', 'annual_inc', 'emp_length', 
+'dti', 'initial_list_status', 'collection_recovery_fee', 
+'home_ownershipRENT', 'term', 'inq_last_6mths', 'tot_cur_bal', 
+'delinq_2yrs', 'revol_util', 'earliest_cr_line2000', 'purposewedding', 
+'purposesmall_business']
+
 y = pd.read_csv('./content/loan_train_label.csv')
 y = y.drop(['id'], axis=1)
 
